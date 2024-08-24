@@ -16,7 +16,7 @@ Open the project in Android Studio.
 Build and run the project on an Android device or emulator.
 Usage
 As an administrator:
-Log in to the admin panel.
+Log in to the admin panel. Admin username : admin Password : admin123
 Add or manage flower categories.
 Add or manage flower inventory.
 As a user:
