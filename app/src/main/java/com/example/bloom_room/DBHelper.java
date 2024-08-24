@@ -41,7 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-
+//Admin unsename gen
     private void insertDefaultAdminData(SQLiteDatabase MyDB) {
         // Check if default admin already exists
         Cursor cursor = MyDB.rawQuery("SELECT * FROM admin WHERE Email = 'admin@default.com'", null);
