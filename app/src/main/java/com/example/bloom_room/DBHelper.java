@@ -41,6 +41,20 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
+
+    private void insertDefaultAdminData(SQLiteDatabase MyDB) {
+        // Check if default admin already exists
+        Cursor cursor = MyDB.rawQuery("SELECT * FROM admin WHERE Email = 'admin@default.com'", null);
+        if (cursor.getCount() == 0) {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("username", "admin");
+            contentValues.put("Email", "admin@default.com");
+            contentValues.put("password", "admin123");
+            MyDB.insert("admin", null, contentValues);
+        }
+        cursor.close();
+    }
+
 //categorydatabase
 
     public Boolean insertCategoryrData(String categoryname , String categoryid){

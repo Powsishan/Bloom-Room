@@ -27,6 +27,7 @@ public class Adminlogin extends AppCompatActivity {
         DB = new DBHelper(this);
         forget = findViewById(R.id.forgeT);
 
+
 //forget username and password
         forget.setOnClickListener(new View.OnClickListener() {
             @Override
